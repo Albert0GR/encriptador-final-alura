@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de Texto</title>
+    <link rel="icono" href="img/Icono.png">
+    <link rel="stylesheet" href="reset.css">     <!-- archivo css para resetear los estilos por defecto del navegador-->
+    <link rel="stylesheet" href="style.css">    <!-- enlace a un archivo css externo -->
+
+     <!-- fuentes importadas de google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logoAlura" src="img/Icono.png">
+    </header>
+    <div class="container">
+        <div class="text-box">
+          <textarea id="text-input" placeholder="Ingrese el texto aqui"></textarea>
+          
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="button-container">
+          <button onclick="encriptar()">Encriptar!</button>
+          <button onclick="desencriptar()">Desencriptar!</button>
+          <button onclick="copiar()">Copiar</button>
+        </div>
+        <div class="text-box">
+          <textarea id="text-output" placeholder="hola como estas"></textarea>
+          <p></p>
+        </div>
+      </div>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
