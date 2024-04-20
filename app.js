@@ -56,3 +56,9 @@ function copiarTexto() {
         console.log("mensaje  noooo copiado");
     }
 }
+
+function convertirAMinusculas(elemento) {
+    elemento.value = elemento.value.toLowerCase();
+  }
+
+  
