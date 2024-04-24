@@ -8,14 +8,14 @@ function encriptar(){
 console.log(textoEntrada);
 
      textoSalida = textoEntrada
-        .replace(/e/gi, "enter")
-        .replace(/i/gi, "imes")
-        .replace(/a/gi, "ai")
-        .replace(/o/gi, "ober")
-        .replace(/u/gi, "ufat");
+     .replaceAll(/e/g, "enter")
+     .replaceAll(/i/g, "imes")
+     .replaceAll(/a/g, "ai")
+     .replaceAll(/o/g, "ober")
+     .replaceAll(/u/g, "ufat");
     
         console.log(textoSalida);
-
+        asignarTextoElemento("text-input","")
         asignarTextoElemento("text-output",textoSalida)
 }
 
@@ -24,15 +24,15 @@ function desencriptar(){
     
 console.log(textoEntrada);
 
-    textoSalida = textoEntrada
-    .replace(/enter/gi, "e")
-    .replace(/imes/gi, "i")
-    .replace(/ai/gi, "a")
-    .replace(/ober/gi, "o")
-    .replace(/ufat/gi, "u");
+    textoSalida = textoEntrada  //jaimenters
+    .replaceAll(/ai/gi, "a")
+    .replaceAll(/enter/gi, "e")
+    .replaceAll(/imes/gi, "i")
+    .replaceAll(/ober/gi, "o")
+    .replaceAll(/ufat/gi, "u");
     
         console.log(textoSalida);
-
+        asignarTextoElemento("text-input","")
         asignarTextoElemento("text-output",textoSalida)
 }
 
@@ -58,7 +58,8 @@ function copiarTexto() {
 }
 
 function convertirAMinusculas(elemento) {
-    elemento.value = elemento.value.toLowerCase();
+    elemento.value = elemento.value.toLowerCase();      // convierte a minusculas
+    elemento.value = elemento.value.replace(/[^a-zA-Z0-9]/,''); //no caracteres especiales
   }
 
   
